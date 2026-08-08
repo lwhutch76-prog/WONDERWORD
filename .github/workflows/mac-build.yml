@@ -1,0 +1,47 @@
+name: Build Mac Game App
+on: [push]
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  build-mac:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pygame pyinstaller
+
+      - name: Compile Mac App Bundle
+        run: |
+          pyinstaller --onedir --windowed \
+          --add-data "WORDS.txt:." \
+          --add-data "DICTIONARY.txt:." \
+          --add-data "GAME_BOARD.png:." \
+          --add-data "ROY_ROGERS.png:." \
+          --add-data "HIGHSCORES.txt:." \
+          --add-data "assets:assets" \
+          --add-data "SOUNDS:SOUNDS" \
+          --name "WonderWord" WONDER_WORDV008.py
+
+      - name: Compress App Bundle Correctly
+        run: |
+          # Native Mac zip command preserves necessary application bundle permissions
+          cd dist
+          zip -r WonderWord-Mac-App.zip WonderWord.app
+
+      - name: Upload Finished App to Your Account
+        uses: actions/upload-artifact@v4
+        with:
+          name: WonderWord-Mac-App
+          path: dist/WonderWord-Mac-App.zip
