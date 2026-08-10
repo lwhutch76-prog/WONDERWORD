@@ -25,6 +25,7 @@ jobs:
       - name: Compile Mac App Bundle
         run: |
           pyinstaller --onedir --windowed \
+           --icon="WWICON.icns" \
           --add-data "WORDS.txt:." \
           --add-data "DICTIONARY.txt:." \
           --add-data "GAME_BOARD.png:." \
