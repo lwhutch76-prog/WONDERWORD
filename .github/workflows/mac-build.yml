@@ -33,7 +33,7 @@ jobs:
           --add-data "HIGHSCORES.txt:." \
           --add-data "assets:assets" \
           --add-data "SOUNDS:SOUNDS" \
-          --name "WonderWord" WONDER_WORDV001.py
+          --name "WonderWord" WONDER_WORDV002.py
 
       - name: Compress App Bundle Correctly
         run: |
