@@ -1,4 +1,4 @@
-#----------------------------VERSION 02------AUG 30, 2026
+#----------------------------VERSION 01------AUG 25, 2026
 
 #WARRIORS VERSION --------- KEEP IN CUSS WORDS....ALL OTHERS REMOVE line around 2500
 
@@ -183,15 +183,15 @@ if not score_file_path.exists():
         try:
             with open(score_file_path, "w", encoding="utf-8") as f:
                 
-                f.write("399788,SHARON,1,0.1,07/28/26  06:23PM\n") 
-                f.write("383156,ELAINE,7,1.9,07/04/26  01:27PM\n") 
-                f.write("299788,MACK,1,0.1,07/28/26  03:21PM\n") 
-                f.write("187632,EZELL,3,0.8,07/16/26  09:17AM\n") 	
-                f.write("271778,HURLY,5,1.8,07/21/26  11:19AM\n") 
-                f.write("260288,NANCY,8,4.7,07/31/26  05:33PM\n") 
+                f.write("399788,ROBERT,1,0.1,07/28/26  06:23PM\n") 
+                f.write("383156,MYRA,7,1.9,07/04/26  01:27PM\n") 
+                f.write("299788,JACKIE,1,0.1,07/28/26  03:21PM\n") 
+                f.write("187632,HUGH,3,0.8,07/16/26  09:17AM\n") 	
+                f.write("271778,ANDREA,5,1.8,07/21/26  11:19AM\n") 
+                f.write("260288,ROCKY,8,4.7,07/31/26  05:33PM\n") 
                 f.write("159784,D TRUMP,3,0.1,07/19/26  04:07PM\n") 
-                f.write("243512,RANDY,7,0.9,08/12/26  11:07PM\n")
-                f.write("133512,HUTCH,7,0.9,08/12/26  1:07AM\n")
+                f.write("243512,BRENDA,7,0.9,08/12/26  11:07PM\n")
+                f.write("133512,LARRY,7,0.9,08/12/26  1:07AM\n")
 
         except Exception:
             pass     
@@ -598,7 +598,7 @@ except Exception:
     font_sz_leaderboard = pygame.font.SysFont(mono_fallbacks, font_sz_20, bold=True)
 
 
-pygame.display.set_caption("WONDER WORD Version 02........AUGUST 30, 2026")
+pygame.display.set_caption("WONDER WORD Version 01........AUGUST 28, 2026")
 CLOCK = pygame.time.Clock()
 
 
