@@ -28,6 +28,7 @@ jobs:
            --icon="WWICON.icns" \
           --add-data "WORDS.txt:." \
           --add-data "DICTIONARY.txt:." \
+          --add-data "WORDLE_WORDS.txt:." \
           --add-data "GAME_BOARD.png:." \
           --add-data "ROY_ROGERS.png:." \
           --add-data "HIGHSCORES.txt:." \
